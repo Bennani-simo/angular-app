@@ -5,15 +5,18 @@ import { SigninComponent } from './auth/signin/signin.component';
 import { ContactListComponent } from './contact-list/contact-list.component';
 import { ContactFormComponent } from './contact-list/contact-form/contact-form.component';
 import { SingleContactComponent } from './contact-list/single-contact/single-contact.component';
+import { AuthGuardService } from './services/auth-guard.service';
 
 
 
 const Routes: Routes = [
   { path: 'auth/signup', component: SignupComponent },
   { path: 'auth/signin', component: SigninComponent },
-  { path: 'contacts', component: ContactListComponent },
-  { path: 'contacts/new', component: ContactFormComponent },
-  { path: 'contacts/view/:id', component: SingleContactComponent }
+  { path: 'contacts', canActivate: [AuthGuardService], component: ContactListComponent },
+  { path: 'contacts/new', canActivate: [AuthGuardService], component: ContactFormComponent },
+  { path: 'contacts/view/:id', canActivate: [AuthGuardService], component: SingleContactComponent },
+  { path: '', redirectTo: 'contacts', pathMatch: 'full' },
+  { path: '**', redirectTo: 'contacts' }
 ];
 
 @NgModule({
