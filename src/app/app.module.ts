@@ -17,6 +17,7 @@ import { ContactService } from './services/contact.service';
 import { AuthGuardService } from './services/auth-guard.service';
 import { HttpClientModule } from "@angular/common/http";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { ErrorPageComponent } from './error-page/error-page.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
     SingleContactComponent,
     ContactFormComponent,
     NavbarComponent,
+    ErrorPageComponent,
   ],
   imports: [
     AngularFireModule.initializeApp(environment.firebase),

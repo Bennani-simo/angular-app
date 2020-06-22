@@ -6,6 +6,7 @@ import { ContactListComponent } from './contact-list/contact-list.component';
 import { ContactFormComponent } from './contact-list/contact-form/contact-form.component';
 import { SingleContactComponent } from './contact-list/single-contact/single-contact.component';
 import { AuthGuardService } from './services/auth-guard.service';
+import { ErrorPageComponent } from './error-page/error-page.component';
 
 
 
@@ -15,8 +16,9 @@ const Routes: Routes = [
   { path: 'contacts', canActivate: [AuthGuardService], component: ContactListComponent },
   { path: 'contacts/new', canActivate: [AuthGuardService], component: ContactFormComponent },
   { path: 'contacts/view/:id', canActivate: [AuthGuardService], component: SingleContactComponent },
+  { path: 'error-page', canActivate: [AuthGuardService], component: ErrorPageComponent },
   { path: '', redirectTo: 'contacts', pathMatch: 'full' },
-  { path: '**', redirectTo: 'contacts' }
+  { path: '**', redirectTo: 'error-page' }
 ];
 
 @NgModule({

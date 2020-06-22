@@ -1,17 +1,19 @@
 <div class="row">
+
     <div class="col-xs-12">
-        <h2>Vos contacts</h2>
-        <div class="list-group">
-            <button class="list-group-item" *ngFor="let contact of contacts; let i = index" (click)="onViewContact(i)">
-                <h3 class="list-group-item-heading">
-                    {{ contact.name }}
-                    <button class="btn btn-default pull-right" (click)="onDeleteContact(contact)">
-                        Delete
-                    </button>
-                </h3>
-                <p class="list-group-item-text">{{ contact.mail }}</p>
-            </button>
-        </div>
-        <button class="btn btn-primary" (click)="onNewContact()">Nouveau contact</button>
     </div>
+    <button class="btn btn-primary" (click)="onNewContact()">Nouveau contact</button>
+</div>
+<h2>Vos contacts</h2>
+<div class="list-group">
+    <button class="list-group-item" *ngFor="let contact of contacts; let i = index" (click)="onViewContact(i)">
+        <h3 class="list-group-item-heading">
+            {{ contact.name }}
+            <button class="btn btn-default pull-right" (click)="onDeleteContact(contact)">
+                Delete
+            </button>
+        </h3>
+        <p class="list-group-item-text">{{ contact.mail }}</p>
+    </button>
+
 </div>
