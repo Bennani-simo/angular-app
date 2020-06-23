@@ -18,6 +18,7 @@ import { AuthGuardService } from './services/auth-guard.service';
 import { HttpClientModule } from "@angular/common/http";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { ErrorPageComponent } from './error-page/error-page.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { ErrorPageComponent } from './error-page/error-page.component';
     ContactFormComponent,
     NavbarComponent,
     ErrorPageComponent,
+
   ],
   imports: [
     AngularFireModule.initializeApp(environment.firebase),
@@ -37,7 +39,8 @@ import { ErrorPageComponent } from './error-page/error-page.component';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    FontAwesomeModule,
 
   ],
   providers: [

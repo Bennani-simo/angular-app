@@ -1,11 +1,15 @@
 import { Component } from '@angular/core';
 import * as firebase from 'firebase';
+import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
+  faCoffee = faCoffee;
   constructor() {
     var firebaseConfig = {
       apiKey: "AIzaSyBW6FUVnwM3A_O6qcfyeL4s5wBuipE7xDo",
