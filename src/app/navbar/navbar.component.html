@@ -31,7 +31,7 @@
                     <a class="button is-light" *ngIf="!isAuth" routerLink="auth/signin">
                         Se connecter
                     </a>
-                    <a class="button is-light" (click)="onSignOut()" style="cursor:pointer" *ngIf="isAuth">
+                    <a class="button is-danger" (click)="onSignOut()" style="cursor:pointer" *ngIf="isAuth">
                         Déconnexion
                     </a>
                 </div>

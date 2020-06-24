@@ -34,4 +34,9 @@ export class ContactFormComponent implements OnInit {
     this.contactsService.createNewContact(newContact);
     this.router.navigate(['/contacts']);
   }
+
+  onBack() {
+    this.router.navigate(['/contacts']);
+  }
+
 }
