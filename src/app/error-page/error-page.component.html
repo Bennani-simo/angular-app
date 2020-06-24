@@ -1,39 +1,74 @@
-<!--
-VIEW IN FULL SCREEN MODE
-FULL SCREEN MODE: http://salehriaz.com/404Page/404.html
+<!DOCTYPE html>
+<html>
 
-DRIBBBLE: https://dribbble.com/shots/4330167-404-Page-Lost-In-Space
--->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>404 Page Not Found</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+</head>
 
-<body class="bg-purple">
+<body>
 
-    <div class="stars">
+    <section class="hero">
+        <div class="hero-head">
+            <nav class="navbar">
+                <div class="container">
+                    <div class="navbar-brand">
+                        <a class="navbar-item has-text-weight-semibold nav-bar-menu-bg-color" href="#">
+                            <p class="is-size-4">Bennani <i class="fas fa-heart heart-pink"></i> Mohamed</p>
+                        </a>
+                        <span class="navbar-burger burger nav-bar-burger-color" data-target="navbarMenu">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+                    </div>
+                    <div id="navbarMenu" class="navbar-menu nav-bar-menu-bg-color">
+                        <div class="navbar-end">
 
-        <div class="central-body">
-            <img class="image-404" src="http://salehriaz.com/404Page/img/404.svg" width="300px"
-                routerLinkActive="active">
-
-            <a class="btn-go-home" target="_blank" routerLink="auth/signup">GO BACK HOME</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
         </div>
-        <div class="objects">
-            <img class="object_rocket" src="http://salehriaz.com/404Page/img/rocket.svg" width="40px">
-            <div class="earth-moon">
-                <img class="object_earth" src="http://salehriaz.com/404Page/img/earth.svg" width="100px">
-                <img class="object_moon" src="http://salehriaz.com/404Page/img/moon.svg" width="80px">
+    </section>
+
+    <section class="section is-medium">
+        <div class="container">
+            <div class="columns is-vcentered">
+                <div class="column has-text-centered">
+                    <h1 class="title">404 Page Not Found</h1>
+                    <p class="subtitle">An unexpected error has occurred. Please contact the site owner.</p>
+                </div>
+                <div class="column has-text-centered">
+                    <img
+                        src="https://www.eastfieldcollege.edu/PublishingImages/Pages/PageNotFoundError/404-robot.gif" />
+                </div>
             </div>
-            <div class="box_astronaut">
-                <img class="object_astronaut" src="http://salehriaz.com/404Page/img/astronaut.svg" width="140px">
+        </div>
+    </section>
+
+    <footer class="footer is-large">
+        <div class="container">
+            <div class="content has-text-centered">
+                <div class="control level-item">
+                    <a href="https://bulma.io">
+                        <img src="https://bulma.io/images/made-with-bulma.png" alt="Made with Bulma" width="128"
+                            height="24">
+                    </a>
+                </div>
+                <p class="is-size-7">Copyright &copy; 2019</p>
+                <div class="control level-item">
+                    <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button"
+                        data-size="large" data-text="Wow what a rad website, go check it out:"
+                        data-related="freddie2025" data-show-count="true">Tweet</a>
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
             </div>
         </div>
-        <div class="glowing_stars">
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-
-        </div>
-
-    </div>
-
+    </footer>
 </body>
+
+</html>

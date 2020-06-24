@@ -1,26 +1,41 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Linkedin light</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.0/css/bulma.css">
+<nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item" routerLink="/">
+            <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+        </a>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-            <li routerLinkActive="active">
-                <a routerLink="contacts">Mes Contacts</a>
-            </li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-            <li routerLinkActive="active" *ngIf="!isAuth">
-                <a routerLink="auth/signup">Créer un compte</a>
-            </li>
-            <li routerLinkActive="active" *ngIf="!isAuth">
-                <a routerLink="auth/signin">Connexion</a>
-            </li>
-            <li>
-                <a (click)="onSignOut()" style="cursor:pointer" *ngIf="isAuth">Déconnexion</a>
-            </li>
-        </ul>
+        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+            data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+
+    <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+            <a class="navbar-item" routerLink="/">
+                Accueil
+            </a>
+            <a class="navbar-item" routerLink="contacts">
+                Mes contacts
+            </a>
+        </div>
+        <div class="navbar-end">
+            <div class="navbar-item">
+                <div class="buttons">
+                    <a class="button is-primary" *ngIf="!isAuth" routerLink="auth/signup">
+                        <strong>S'inscire</strong>
+                    </a>
+                    <a class="button is-light" *ngIf="!isAuth" routerLink="auth/signin">
+                        Se connecter
+                    </a>
+                    <a class="button is-light" (click)="onSignOut()" style="cursor:pointer" *ngIf="isAuth">
+                        Déconnexion
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
 </nav>
